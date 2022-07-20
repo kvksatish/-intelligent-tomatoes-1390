@@ -1,0 +1,314 @@
+
+
+
+import { useState, useEffect, useContext } from 'react'
+import axios from 'axios'
+import { AuthContext } from '../context/AuthContext'
+
+
+
+
+
+
+
+
+///////////Chakra Ui/////////////////////////////////////
+
+npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
+
+import * as React from 'react'
+
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react'
+
+function App() {
+  // 2. Wrap ChakraProvider at the root of your app
+  return (
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  )
+}
+
+
+icons----
+
+npm i @chakra-ui/icons
+
+import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
+
+// The default icon size is 1em (16px)
+<PhoneIcon />
+
+// Use the `boxSize` prop to change the icon size
+<AddIcon w={6} h={6} />
+
+// Use the `color` prop to change the icon color
+<WarningIcon w={8} h={8} color="red.500" />
+
+--------------------------------------
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////git-hub//////////////////////////////////
+
+
+evalution pushing
+
+
+HP@kvksatish MINGW64 /f/gits
+$ git clone https://github.com/masai-course/kumara_fw17_0657.git
+Cloning into 'kumara_fw17_0657'...
+remote: Enumerating objects: 121, done.
+remote: Counting objects: 100% (53/53), done.
+remote: Compressing objects: 100% (41/41), done.
+remote: Total 121 (delta 10), reused 46 (delta 8), pack-reused 68Receiving oReceiving objects: 100% (121/121), 683.33 KiB | 780.00 KiB/s, done.
+Resolving deltas: 100% (26/26), done.
+
+Updating files: 100% (328/328), done.
+
+HP@kvksatish MINGW64 /f/gits
+$ cd kumara_fw17_0657
+
+HP@kvksatish MINGW64 /f/gits/kumara_fw17_0657 (master)
+$ git add .
+
+HP@kvksatish MINGW64 /f/gits/kumara_fw17_0657 (master)
+$ git commit -m"testing"
+[master 4400ff3] testing
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 unit-4/sprint-4/optional/testing/Test.jsx
+
+HP@kvksatish MINGW64 /f/gits/kumara_fw17_0657 (master)
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 490 bytes | 245.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.       
+To https://github.com/masai-course/kumara_fw17_0657.git
+   5936312..4400ff3  master -> master
+
+HP@kvksatish MINGW64 /f/gits/kumara_fw17_0657 (master)
+
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////JSON-Server//////////////////////////////////
+
+npm install -g json-server
+
+json-server --watch db.json --port 8080
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////--Axios--//////////////////////////////////
+npm install axios
+
+get 
+
+axios.get('/user', {
+    params: {
+      ID: 12345
+    }
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });  
+
+post
+
+axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+put
+
+axios.put('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+axios.request(config)
+axios.get(url[, config])
+axios.delete(url[, config])
+axios.head(url[, config])
+axios.options(url[, config])
+axios.post(url[, data[, config]])
+axios.put(url[, data[, config]])
+axios.patch(url[, data[, config]])
+
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////--Context-Api--//////////////////////////////////
+
+import React from 'react'
+import { createContext } from 'react'
+import { useState } from 'react'
+
+export const AuthContext = createContext()
+
+export const AuthProvider = ({ children }) => {
+
+    const [isAuth, setIsAuth] = useState(false)
+  
+    const login = (username, password) => {
+        setIsAuth(true)
+    }
+    const logout = () => {
+        setIsAuth(false)
+    }
+
+    return (
+        <AuthContext.Provider value={{ isAuth, login, logout, setCc, cc }}>{children}</AuthContext.Provider>
+    )
+}
+
+import { AuthProvider } from './context/AuthContext';
+
+<AuthProvider>
+       <App />
+ </AuthProvider>
+
+
+
+
+ import { useContext } from 'react'
+import { AuthContext } from '../context/AuthContext'
+
+    const {isAuthorised,login,logout} = useContext(AuthContext)
+
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////--Styled-Component--//////////////////////////////////
+
+npm install --save styled-components
+
+import styled from 'styled-components';
+const Appstyled=styled.div`
+text-align: center;
+//css here
+`;
+
+function App(){
+return(
+
+<Appstyled>
+//things inside 
+</Appstyled>
+
+)}
+
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////--useReduser--//////////////////////////////////
+
+import {useReducer} from 'react'
+const reducer=(counter,action)=>{
+switch (action.type) {
+  case "inc":{
+    return counter + 1
+  }
+  case "dec":{
+    return counter - 1
+  }
+
+  default:
+    console.log("type error", action.type)
+    return counter;
+}
+}
+function App() {
+const [counter, dispatch] = useReducer(reducer,0)
+  return (
+    <div className="App">
+      <div>
+      counter: {counter}
+      <button onClick={()=>dispatch({type:"inc"}) } >+</button>
+      <button onClick={()=>dispatch({type:"dec"}) } >-</button></div>
+    
+      <Cart/>
+     <Wishlist/>
+      
+      
+    </div>
+  );
+}
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////--Router-Dom--//////////////////////////////////
+
+npm install react-router-dom@6
+
+
+import { BrowserRouter } from "react-router-dom";
+<BrowserRouter>
+      <App />
+    </BrowserRouter>
+
+
+import { Routes, Route, Link } from "react-router-dom";
+function App() {
+  return (
+    <div className="App">
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
+    </div>
+  );
+}
+
+navigate-------
+import { useNavigate } from "react-router-dom";
+const About = () => {
+  let navigate = useNavigate();
+
+  return (
+    <div>
+      <button onClick={()=>navigate('/')}>Go to home page</button>
+    </div>
+  );
+};
+
+export default About;
+
+
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////-----uuid-------//////////////////////////////////
+
+npm install uuid
+import { v4 as uuidv4 } from 'uuid';
+id: uuidv4()
+
+/////////////////////////////////////////////////////////////
+-------------------------------------------------------------
+////////////////------------//////////////////////////////////
