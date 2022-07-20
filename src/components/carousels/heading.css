@@ -1,0 +1,34 @@
+.carousel-control-next-icon{
+    color: black;
+    size: 10px;
+}
+
+
+.navbtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 10%;
+    color: rgb(124 123 123);
+  
+    
+}
+
+.pause{
+   
+    padding: 2px 5px;
+    margin: 0px 10px;
+    background-color: rgb(124 123 123);
+    color: white;
+    border-radius: 5px;
+    cursor:pointer
+}
+
+.slidersbox{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
