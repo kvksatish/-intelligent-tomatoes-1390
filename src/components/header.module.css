@@ -1,0 +1,78 @@
+.topbar{
+width: 100%;
+background-color: #ffde2f;
+height: 64px;
+padding: 0px 15px ;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.indiv{
+
+}
+.logo{
+    height: 40px;
+    font-size: 10px;
+    vertical-align: middle;
+    cursor:pointer
+}
+
+
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    height: 50px;
+    background-color: #313131;
+    color: white;
+    margin: auto;
+    margin: 15px;
+    
+   
+}
+
+.pause{
+   
+    padding: 2px 5px;
+    margin: 0px 10px;
+    background-color: rgb(124 123 123);
+    color: white;
+    border-radius: 5px;
+    cursor:pointer
+}
+
+
+
+
+
+.topnews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 10%;
+    background-color: #aaa;
+    color: #313131;
+    border-radius: 0 5px 5px 0;
+    
+}
+.slidenews{
+   
+    height: 100%;
+    width:80%;
+    display: flex;
+    align-items: center;
+     text-align: left;
+    margin: 0 10px;
+    cursor:pointer
+}
+.navbtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 10%;
+    color: rgb(124 123 123);
+    
+}
