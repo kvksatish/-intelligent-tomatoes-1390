@@ -1,5 +1,7 @@
 .App {
+  background-color: #f5f5f5;
   text-align: center;
+  min-height: 50rem;
 }
 
 .App-logo {
@@ -38,8 +40,8 @@
 }
 .mainbdy{
 display: grid;
-grid-template-columns: 1fr 2.5fr 1fr;
+grid-template-columns: 1.2fr 2.5fr 1.1fr;
 gap: 1.5rem;
 justify-content: space-between;
-align-items: center;
+
 }

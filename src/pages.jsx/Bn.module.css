@@ -1,0 +1,39 @@
+.bgdiv{
+   
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(166, 166, 166, 0.16) 0px 3px 6px, rgba(197, 194, 194, 0.23) 0px 3px 6px;
+    background-color: white;
+    padding:  0.5rem 0.1rem 0.5rem 0.5rem;
+    margin-top: 1rem;
+      
+   box-sizing: border-box;
+   
+
+}
+
+.bgimgdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 22rem;
+    margin-top: 0.1rem;
+   
+    margin-left: 0.1rem;
+      box-shadow: #edcb2b -2.5rem -2.5rem 0px -1.875rem,#edcb2b -1.875rem 1.25rem 0px -1.25rem
+    
+}
+.bgimgdiv>img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    /* //border-top: 0.5rem solid #edcb2b; */
+ 
+  
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.bgtext{
+    font-size: 1.2rem;
+    text-align: left;
+}

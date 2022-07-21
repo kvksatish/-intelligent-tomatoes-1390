@@ -30,7 +30,7 @@ function Headlinescarousel() {
         setpause(!pause)
         if (pause) {
 
-            for (var key in col.current.element) {
+            for (let key in col.current.element) {
                 if (col.current.element.hasOwnProperty(key)) {
                     col.current.element[key].memoizedProps.onMouseOver()
                     break;
@@ -40,7 +40,7 @@ function Headlinescarousel() {
 
         }
         else {
-            for (var key in col.current.element) {
+            for (let key in col.current.element) {
                 if (col.current.element.hasOwnProperty(key)) {
 
                     col.current.element[key].memoizedProps.onMouseOut()
@@ -54,8 +54,9 @@ function Headlinescarousel() {
 
     return (
         <div className='slidersbox'>
-            <Carousel interval={1500} ref={col} controls={false} indicators={false} className="cc">
-                <Carousel.Item>
+            <div className='cc'>
+                <Carousel interval={1500} ref={col} controls={false} indicators={false} className="cc">
+                    {/* <Carousel.Item>
                     qwertyuiop
                 </Carousel.Item>
                 <Carousel.Item>
@@ -66,17 +67,17 @@ function Headlinescarousel() {
                 </Carousel.Item>
                 <Carousel.Item>
                     xdcfgvhbjqwertyuiopqwertyuio
-                </Carousel.Item>
+                </Carousel.Item> */}
 
-                {/* {
-              headlines.map((ele) => {
-                  return  <Carousel.Item>
-              {ele.title}
-          </Carousel.Item>
-              })
-    }      */}
-            </Carousel>
-
+                    {
+                        headlines.map((ele) => {
+                            return <Carousel.Item key={ele.title} >
+                                {ele.title}
+                            </Carousel.Item>
+                        })
+                    }
+                </Carousel>
+            </div>
 
             <div className="navbtns" >
                 <FontAwesomeIcon onClick={() => col.current.prev()} style={{ fontSize: "20px", cursor: "pointer" }} icon={faCaretLeft} />
