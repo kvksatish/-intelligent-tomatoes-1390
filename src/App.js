@@ -4,6 +4,7 @@ import Header from './components/Header';
 import HeadlinesSlider from './components/HeadlinesSlider';
 import Leftbar from './components/leftbar/Leftbar';
 import Rightbar from './components/Rightbar/Rightbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,11 +12,14 @@ function App() {
       <Header />
       <HeadlinesSlider />
       <div className='mainbdy'>
-        <Leftbar />
-        <Allroutes />
-        <Rightbar />
-      </div>
+        <div><Leftbar /></div>
+        <div> <Allroutes /></div>
+        <div><Rightbar /></div>
 
+
+
+      </div>
+      <Footer />
 
     </div>
   );

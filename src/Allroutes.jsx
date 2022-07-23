@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
+import DescPage from './pages.jsx/DescPage'
 import Home from './pages.jsx/Home'
 import NewsPage from './pages.jsx/NewsPage'
 
@@ -8,6 +9,7 @@ const Allroutes = () => {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/:news' element={<NewsPage />} />
+            <Route path='/desc' element={<DescPage />} />
             {/* <Route path='/World' element={<NewsPage />} />
             <Route path='/Entertainment' element={<NewsPage />} />
             <Route path='/Business' element={<NewsPage />} />

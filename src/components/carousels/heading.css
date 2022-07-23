@@ -1,40 +1,45 @@
-.carousel-control-next-icon{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.carousel-control-next-icon {
     color: black;
     size: 10px;
 }
 
 
-.navbtns{
+.navbtns {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-    
+
     color: rgb(124 123 123);
-  
-    
+
+
 }
 
-.pause{
-   
+.pause {
+
     padding: 2px 5px;
     margin: 0px 10px;
     background-color: rgb(124 123 123);
     color: white;
     border-radius: 5px;
-    cursor:pointer
+    cursor: pointer
 }
 
-.slidersbox{
+.slidersbox {
     width: 100%;
     display: grid;
     grid-template-columns: 9fr 1fr;
-
-
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
 }
-.cc{
+
+.cc {
 
     width: 100%;
     display: flex;
     align-items: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
 }

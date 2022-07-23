@@ -1,21 +1,35 @@
-.cont{
+.cont {
     text-align: left;
-    padding:  0 1rem;
+    padding: 0 1rem;
+
+    width: 100%;
 }
 
-.pagesdivs{
-    
+.cont2 {
+    text-align: left;
+    padding: 0 1rem;
+    position: fixed;
+
+    width: 24%;
+
+
+}
+
+.pagesdivs {
+
     display: flex;
-  
+
     align-items: center;
-    
+    margin-bottom: 0.1rem;
     padding: 0.1rem 0.01rem;
 
 }
-.pagesdivs>img{
+
+.pagesdivs>img {
     margin-right: 0.8rem;
 }
-.pagesdivs:hover{
+
+.pagesdivs:hover {
     cursor: pointer;
     background-color: #ffde2f;
 }

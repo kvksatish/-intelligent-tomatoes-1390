@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { headlinesresult } from '../api';
 import "./heading.css"
@@ -7,20 +7,27 @@ import { faCaretLeft } from "@fortawesome/free-solid-svg-icons"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 import { faPause } from "@fortawesome/free-solid-svg-icons"
 import { faPlay } from "@fortawesome/free-solid-svg-icons"
+import { DtrnContext } from '../../context/DtrnContext';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 function Headlinescarousel() {
+    const { putdt, putrbdata } = useContext(DtrnContext)
 
-    const [pause, setpause] = useState(false)
+    const [pause, setpause] = useState(true)
 
     const col = useRef(null)
-    console.log(col)
-
+    const [load, setload] = useState(false)
     const [headlines, setheadlines] = useState([])
     useEffect(() => {
+        setload(false)
         headlinesresult().then((res) => {
+
             setheadlines(res.articles)
+            setload(true)
+            putrbdata(res.articles)
             //console.log(res.articles)
         })
 
@@ -51,12 +58,16 @@ function Headlinescarousel() {
 
     }
 
+    const navigate = useNavigate()
 
     return (
         <div className='slidersbox'>
+
             <div className='cc'>
-                <Carousel interval={1500} ref={col} controls={false} indicators={false} className="cc">
-                    {/* <Carousel.Item>
+                {
+                    load ?
+                        <Carousel interval={1500} ref={col} controls={false} indicators={false} className="cc">
+                            {/* <Carousel.Item>
                     qwertyuiop
                 </Carousel.Item>
                 <Carousel.Item>
@@ -69,14 +80,24 @@ function Headlinescarousel() {
                     xdcfgvhbjqwertyuiopqwertyuio
                 </Carousel.Item> */}
 
-                    {
-                        headlines.map((ele) => {
-                            return <Carousel.Item key={ele.title} >
-                                {ele.title}
-                            </Carousel.Item>
-                        })
-                    }
-                </Carousel>
+
+
+                            {
+                                headlines.map((ele) => {
+                                    return <Carousel.Item onClick={() => {
+                                        putdt(ele)
+                                        // console.log(datatr)
+                                        navigate("/desc")
+                                    }} key={ele.title} >
+                                        {ele.title}
+                                    </Carousel.Item>
+                                })
+                            }
+
+                        </Carousel>
+                        : "Loading..."
+
+                }
             </div>
 
             <div className="navbtns" >

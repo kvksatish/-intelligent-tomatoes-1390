@@ -19,17 +19,17 @@ const Home = () => {
   }, [])
 
   return (
-    <div>
+    <div  >
       {
-        load ? <div>
-
-          <BigNews data={data[1]} />
-          {
-            data.map((ele) => {
-              return <NewsReader key={ele.title} data={ele} />
-            })
-          }
-        </div>
+        load ?
+          <div>
+            <BigNews data={data[1]} />
+            {
+              data.map((ele) => {
+                return <NewsReader key={ele.title} data={ele} />
+              })
+            }
+          </div>
           : <Spinner
             thickness='4px'
             speed='0.65s'

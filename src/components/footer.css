@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.ftbcon {
+    margin-top: 3rem;
+    display: flex;
+    background-color: #1c1c1c;
+    padding: 1rem 0 0 1rem;
+    color: aliceblue;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.fticon>img {
+
+    width: 6rem;
+    height: 2.5rem;
+}
+
+.ftflxcon {
+
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-left: 5rem;
+    align-items: center;
+}
+
+.ftflxcon>div {
+    cursor: pointer;
+}
