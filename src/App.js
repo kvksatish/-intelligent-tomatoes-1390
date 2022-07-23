@@ -11,9 +11,12 @@ function App() {
       <Header />
       <HeadlinesSlider />
       <div className='mainbdy'>
-        <Leftbar />
-        <Allroutes />
-        <Rightbar />
+        <div><Leftbar /></div>
+        <div> <Allroutes /></div>
+        <div><Rightbar /></div>
+
+
+
       </div>
 
 

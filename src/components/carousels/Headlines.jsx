@@ -12,7 +12,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons"
 
 function Headlinescarousel() {
 
-    const [pause, setpause] = useState(false)
+    const [pause, setpause] = useState(true)
 
     const col = useRef(null)
     console.log(col)

@@ -1,32 +1,41 @@
-.topbar{
-width: 100%;
-background-color: #ffde2f;
-height: 64px;
-padding: 0px 15px ;
-display: flex;
-justify-content: space-between;
-align-items: center;
-box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+.topbar {
+    width: 100%;
+    background-color: #ffde2f;
+    height: 64px;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
 }
 
-/* .topbar{
+.topbar2 {
+    width: 100%;
+    background-color: #ffde2f;
+    height: 64px;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
-} */
-
-
-.logo{
-    height: 40px;
-    font-size: 10px;
-    vertical-align: middle;
-    cursor:pointer
 }
 
 
-.slider{
+.logo {
+    height: 40px;
+    font-size: 10px;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+
+.slider {
     display: grid;
     grid-template-columns: 1fr 7fr;
     width: 98%;
@@ -35,55 +44,57 @@ box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
     color: white;
     margin: auto;
     margin: 15px;
- 
-    
-   
+
+
+
 }
 
-.pause{
-   
+.pause {
+
     padding: 2px 5px;
     margin: 0px 10px;
     background-color: rgb(124 123 123);
     color: white;
     border-radius: 5px;
-    cursor:pointer
+    cursor: pointer
 }
 
 
 
 
 
-.topnews{
+.topnews {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-  
+
     background-color: #aaa;
     color: #313131;
     border-radius: 0 5px 5px 0;
-    
+
 }
-.slidenews{
-   
+
+.slidenews {
+
     height: 100%;
-    
+
     display: flex;
     align-items: center;
-     text-align: left;
+    text-align: left;
     margin: 0 10px;
-    cursor:pointer;
-   
-  
-    
+    cursor: pointer;
+
+
+
 }
-.navbtns{
+
+.navbtns {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
     width: 10%;
     color: rgb(124 123 123);
-    
+
 }
