@@ -1,12 +1,15 @@
 import React, { useContext } from 'react'
-import { Dtrn } from '../context/Dtrn'
+import { useNavigate } from 'react-router-dom'
+import { DtrnContext } from '../context/DtrnContext'
+
 import "./Np.css"
 const NewsReader = ({ data }) => {
-    const { putdt, getdt } = useContext(Dtrn)
+    const { putdt } = useContext(DtrnContext)
+    const navigate = useNavigate()
     return (
         <div className='smdiv' onClick={() => {
             putdt(data)
-            console.log(getdt())
+            navigate("/desc")
         }} >
             <div className='imgdiv' > <img src={data.image} alt="" /></div>
             <div className='text' >

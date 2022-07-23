@@ -1,18 +1,38 @@
+.cont {
+
+    text-align: left;
+    min-height: 80rem;
+    color: #4c4c4c;
+}
+
+.title {
+    color: #3a3a3a;
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+
+.description {
+    font-size: 1rem;
+    padding-top: 0.8rem;
+}
+
+.sources {
+    margin-top: 1rem;
+
+    font-size: 0.9rem;
+}
+
 .bgdiv {
 
 
     height: auto;
     box-shadow: rgba(166, 166, 166, 0.16) 0px 3px 6px, rgba(197, 194, 194, 0.23) 0px 3px 6px;
     background-color: white;
-    padding: 0.5rem 0.1rem 0.5rem 0.5rem;
+    padding: 0.5rem 0.1rem 0.2rem 0.5rem;
     margin-top: 1rem;
 
     box-sizing: border-box;
-    color: #4c4c4c;
-
-    cursor: pointer;
-
-    font-weight: 600;
 
 
 }
@@ -39,7 +59,13 @@
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.bgtext {
-    font-size: 1.2rem;
-    text-align: left;
+.imgbtmtxt {
+    margin-top: 0%;
+    background-color: #000000bd;
+    padding: 0.1rem;
+    color: white;
+}
+
+.content {
+    font-size: 2rem;
 }

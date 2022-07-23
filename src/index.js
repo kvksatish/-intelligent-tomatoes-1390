@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
-import { DtrnProvider } from './context/Dtrn';
+import { DtrnProvider } from './context/DtrnContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

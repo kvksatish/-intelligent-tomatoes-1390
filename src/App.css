@@ -40,10 +40,13 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .mainbdy {
   display: grid;
   grid-template-columns: 1.2fr 2.5fr 1.1fr;
   gap: 1.5rem;
+  font-family: 'Roboto Slab', serif;
 
 
 }
