@@ -7,7 +7,15 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
 }
+
+/* .topbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+} */
 
 
 .logo{
@@ -19,15 +27,15 @@ box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
 
 
 .slider{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
     width: 98%;
     height: 50px;
     background-color: #313131;
     color: white;
     margin: auto;
     margin: 15px;
+ 
     
    
 }
@@ -51,7 +59,7 @@ box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
     align-items: center;
     justify-content: center;
     height: 50px;
-    width: 10%;
+  
     background-color: #aaa;
     color: #313131;
     border-radius: 0 5px 5px 0;
@@ -60,12 +68,13 @@ box-shadow: rgba(27, 27, 27, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
 .slidenews{
    
     height: 100%;
-    width:90%;
+    
     display: flex;
     align-items: center;
      text-align: left;
     margin: 0 10px;
     cursor:pointer;
+   
   
     
 }

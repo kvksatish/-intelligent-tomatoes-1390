@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     height: 50px;
-    width: 10%;
+    
     color: rgb(124 123 123);
   
     
@@ -26,9 +26,15 @@
 }
 
 .slidersbox{
-     display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
 
+
+}
+.cc{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
 }

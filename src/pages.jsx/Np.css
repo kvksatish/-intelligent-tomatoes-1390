@@ -1,0 +1,29 @@
+.smdiv{
+    box-shadow: rgba(63, 63, 63, 0.16) 0px 3px 6px, rgba(147, 147, 147, 0.23) 0px 3px 6px;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    background-color: white;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
+  
+   
+
+}
+.imgdiv{
+    width: 25%;
+    
+}
+.imgdiv>img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-top: 3px solid #edcb2b;
+    border-left: 3px solid #edcb2b;
+}
+.text{
+    width: 70%;
+    text-align: left;
+}
